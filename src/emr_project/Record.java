@@ -8,11 +8,11 @@ public class Record {
     private static int id = 100;
     private final int recordId;
     private Doctor doctor;
-    private BloodGroup bloodGroup;
     private Hospital hospital;
 
+//    private BloodGroup bloodGroup;
 //    private Genotype genotype;
-//    this is supposed to be in the user class, because a user have just one genotype that doesn't change
+//    this is supposed to be in the userClass and be called from there, because a user have just one genoType//bloodGroup that doesn't change
 
 
 
