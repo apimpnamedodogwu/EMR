@@ -10,10 +10,6 @@ public class Record {
     private Doctor doctor;
     private Hospital hospital;
 
-//    private BloodGroup bloodGroup;
-//    private Genotype genotype;
-//    this is supposed to be in the userClass and be called from there, because a user have just one genoType//bloodGroup that doesn't change
-
 
 
     public Record(Hospital hospital, Doctor doctor){
@@ -38,13 +34,4 @@ public class Record {
     public Hospital getHospital() {
         return hospital;
     }
-
-    public String getBloodGroup() {
-        return String.valueOf(bloodGroup);
-    }
-
-    public void setBloodGroup(BloodGroup bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
 }
