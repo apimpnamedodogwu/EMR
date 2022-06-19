@@ -19,7 +19,38 @@ class RecordTest {
     }
 
     @Test
-    void testThatCanGetHospital(){
-        
+    void testThatAMedicalTestCanBeAdded(){
+        MedTest malariaTest = new MedTest();
+        record.addTests(malariaTest);
+        assertEquals(1, record.getTests().size());
+    }
+
+    @Test
+    void testThatManyMedicalTestCanBeAdded(){
+        MedTest testForSugarLevel = new MedTest();
+        MedTest testForAids = new MedTest();
+        record.addTests(testForSugarLevel);
+        record.addTests(testForAids);
+        assertEquals(2, record.getTests().size());
+    }
+
+    @Test
+    void testThatMedicalTestReportCanBeGottenAtAParticularIndex(){
+        MedTest testForSugarLevel = new MedTest();
+        MedTest testForAids = new MedTest();
+        record.addTests(testForSugarLevel);
+        record.addTests(testForAids);
+        assertEquals(testForSugarLevel, record.tests.get(0));
+        assertEquals(testForAids, record.tests.get(1));
+    }
+
+    @Test
+    void testRecordHasValidId(){
+        MedTest testForSugarLevel = new MedTest();
+        MedTest testForAids = new MedTest();
+        record.addTests(testForSugarLevel);
+        assertEquals(100, record.getRecordId());
+//        record.addTests(testForAids);
+//        assertEquals(101, record.getRecordId());
     }
 }
