@@ -42,5 +42,9 @@ public class User {
         throw new UserException("Patient with card Id " + cardId + " does not exist!");
     }
 
+    public static void resetId() {
+        cardNumberCount = 1;
+    }
+
 
 }

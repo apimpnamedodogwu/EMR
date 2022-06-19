@@ -21,4 +21,8 @@ public class MedTest {
         return testType;
     }
 
+    public static void resetId() {
+        testCount = 1;
+    }
+
 }

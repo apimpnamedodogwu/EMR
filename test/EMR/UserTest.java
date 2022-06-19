@@ -1,5 +1,6 @@
 package EMR;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,11 @@ class UserTest {
     @BeforeEach
     void setUp() {
         myUser = new User("Eden");
+    }
+
+    @AfterEach
+    void tearDown() {
+        User.resetId();
     }
 
     @Test

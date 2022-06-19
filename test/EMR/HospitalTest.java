@@ -1,5 +1,6 @@
 package EMR;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,12 @@ class HospitalTest {
     @BeforeEach
     void setUp() {
         myHospital = new Hospital("Eden Life", "The Garden");
+    }
+
+    @AfterEach
+    void tearDown() {
+        Consultant.resetId();
+        MedTest.resetId();
     }
 
     @Test
@@ -72,7 +79,11 @@ class HospitalTest {
         assertEquals(0, result.size());
     }
 
-
+    @Test
+    void testThatExceptionMessageIsThrownInMethodDeleteTest() {
+        assertThrows(TestException.class,
+                () -> myHospital.deleteTest(1));
+    }
 
     @Test
     void testThatIdCanBeGotten() {
