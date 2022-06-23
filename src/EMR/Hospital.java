@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class Hospital {
 
-//   private static int IdCount = 1;
 
     private int hospitalId;
     private String nameOfHospital;
@@ -81,5 +80,13 @@ public class Hospital {
             }
         }
         throw new TestException("Test with Id number" + Id + " does not exist!");
+    }
+
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "nameOfHospital='" + nameOfHospital + '\'' +
+                ", addressOfHospital='" + addressOfHospital + '\'' +
+                '}';
     }
 }
