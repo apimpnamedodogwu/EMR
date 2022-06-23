@@ -31,5 +31,14 @@ public class Records {
         return testId;
     }
 
-
+    @Override
+    public String toString() {
+        return "Records{" +
+                "nameOfTest='" + nameOfTest + '\'' +
+                ", cardId=" + cardId +
+                ", consultantId=" + consultantId +
+                ", testId=" + testId +
+                ", userName='" + userName + '\'' +
+                '}';
+    }
 }
