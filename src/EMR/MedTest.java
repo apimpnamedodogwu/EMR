@@ -25,4 +25,11 @@ public class MedTest {
         testCount = 1;
     }
 
+    @Override
+    public String toString() {
+        return String.format("""
+                Test Type: %s
+                Test Id: %d
+                """, getTestType(), getTestId());
+    }
 }
