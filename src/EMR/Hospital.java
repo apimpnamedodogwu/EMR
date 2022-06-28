@@ -27,7 +27,6 @@ public class Hospital {
         return tests;
     }
 
-
     public int getHospitalId() {
         return hospitalId;
     }
